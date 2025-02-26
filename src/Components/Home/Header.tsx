@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import { Flex } from "@radix-ui/themes";
-import { Leaf } from "lucide-react";
+import { Leaf, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Sidebar } from "../UI";
+import { AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () =>{ setIsOpen((prev) => !prev);}
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,21 +25,52 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 w-full transition-colors duration-300 ${scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent"}`}>
-      <nav className="main flex items-center justify-between h-[70px] px-4 md:px-8">
-        <a href="/">
-          <h2 className="text-white font-pac text-2xl md:text-3xl">Mevolve</h2>
-        </a>
+    <>
+      <header
+        className={`fixed z-50 top-0 w-full transition-colors duration-300 ${
+          scrolled ? "bg-black/50 backdrop-blur-md shadow-md" : "bg-transparent"
+        }`}
+      >
+        <nav className="main flex items-center justify-between h-[70px] px-4 md:px-8">
+          <a href="/">
+            <h2 className="text-white font-pac text-2xl md:text-3xl">
+              Mevolve
+            </h2>
+          </a>
 
-        <Flex align="center" gap="4">
-          <a href="#" className="font-sans text-white">About</a>
-          <Link to="/signup" className="center gap-2 bg-white px-4 py-2 font-mont rounded-full text-[#444] text-sm font-semibold">
-            <Leaf size={18} className="text-green-600" />
-            <span>Sign Up</span>
-          </Link>
-        </Flex>
-      </nav>
-    </header>
+          <Flex align="center" gap="4">
+            <a
+              href="#"
+              className="font-sans text-white text-sm hidden md:block"
+            >
+              About
+            </a>
+            <Link
+              to="/blogs"
+              className="font-sans text-white text-sm hidden md:block"
+            >
+              Blogs
+            </Link>
+            <Link
+              to="/register"
+              className="center gap-2 bg-white px-4 py-2 font-mont rounded-full text-[#444] text-sm font-semibold"
+            >
+              <Leaf size={18} className="text-green-600" />
+              <span>Sign Up</span>
+            </Link>
+
+            <button
+              onClick={toggleMenu}
+              className="block md:hidden cursor-pointer"
+            >
+              <Menu />
+            </button>
+          </Flex>
+        </nav>
+      </header>
+
+      <AnimatePresence>{isOpen && <Sidebar isOpen={isOpen} onClose={toggleMenu} />}</AnimatePresence>
+    </>
   );
 };
 

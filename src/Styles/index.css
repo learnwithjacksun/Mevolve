@@ -38,7 +38,7 @@ body {
 
 .hero-container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/SwgJqdrR/67ae0cfa3048f.jpg');
-    min-height: 500px;
+    min-height: calc(100dvh - 100px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

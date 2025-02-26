@@ -18,8 +18,8 @@ const Hero = () => {
             </p>
         </div>
         <Link
-          to="/"
-          className="mt-6 bg-green-600 text-white font-semibold px-6 py-4 rounded-full"
+          to="/register"
+          className="mt-6 bg-green-700 font-mont text-white font-semibold px-6 py-4 rounded-full"
         >
           Sign Up Today!
         </Link>

@@ -6,7 +6,7 @@ const Banner = () => {
     <>
     <div className="main">
 
-    <Section className="bg-gradient-to-br from-green-800 to-green-500 px-6 rounded-2xl">
+    <Section className="bg-gradient-to-br from-green-900 to-green-600 px-6 rounded-2xl">
         
         <Container className="text-center">
 
