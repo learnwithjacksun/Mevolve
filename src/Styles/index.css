@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Instrument Sans', sans-serif;
+    --font-mont: 'Montserrat', sans-serif;
+    --font-pac: "Pacifico", sans-serif;
+}
+
+* {
+    @apply outline-none scroll-smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-secondary);
+    color: var(--color-main);
+    color: #3cb371;
+}
+
+
+.line {
+    @apply relative before:absolute before:bottom-0 before:h-[1px] before:w-1/2 before:bg-gray-300 before:left-1/2 before:-translate-x-1/2
+}
+
+.center {
+    @apply flex justify-center items-center;
+}
+
+.main {
+    @apply max-w-[90%] 2xl:max-w-[1280px] mx-auto;
+}
+
+.layout {
+    @apply max-w-[90%] md:max-w-[700px] mx-auto;
+}
+
+.hero-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/SwgJqdrR/67ae0cfa3048f.jpg');
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
