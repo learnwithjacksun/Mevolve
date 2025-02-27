@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Flex } from "@radix-ui/themes";
 import { Leaf, Menu } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Sidebar } from "../UI";
 import { AnimatePresence } from "framer-motion";
 
@@ -24,6 +24,10 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const location = useLocation()
+
+  const isHome = location.pathname === "/"
+
   return (
     <>
       <header
@@ -39,12 +43,18 @@ const Header = () => {
           </a>
 
           <Flex align="center" gap="4">
-            <a
-              href="#"
+          <Link
+              to="/"
+              className="font-sans text-white text-sm hidden md:block"
+            >
+              Home
+            </Link>
+            {isHome && <a
+              href="#about"
               className="font-sans text-white text-sm hidden md:block"
             >
               About
-            </a>
+            </a>}
             <Link
               to="/blogs"
               className="font-sans text-white text-sm hidden md:block"
@@ -61,7 +71,7 @@ const Header = () => {
 
             <button
               onClick={toggleMenu}
-              className="block md:hidden cursor-pointer"
+              className="flex items-center justify-center md:hidden cursor-pointer"
             >
               <Menu />
             </button>

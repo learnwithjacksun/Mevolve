@@ -2,7 +2,7 @@ import { Flex } from "@radix-ui/themes";
 import { motion } from "framer-motion";
 import { Leaf, X } from "lucide-react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = ({
   isOpen,
@@ -22,6 +22,10 @@ const Sidebar = ({
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+  const location = useLocation()
+
+  const isHome = location.pathname === "/"
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end md:hidden block">
@@ -53,14 +57,14 @@ const Sidebar = ({
               Home
             </a>
           </li>
-          <li>
+          {isHome && <li>
             <a
               href="#about"
               className="active:text-green-700 block py-2 px-4 rounded-md hover:bg-slate-100"
             >
               About
             </a>
-          </li>
+          </li>}
           <li>
             <Link
               to={"/blogs"}

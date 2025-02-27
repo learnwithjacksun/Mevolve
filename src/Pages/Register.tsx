@@ -1,4 +1,4 @@
-import { Header } from "@/Components/Home";
+import { Footer, Header } from "@/Components/Home";
 import { Form } from "@/Components/Register";
 
 const Register = () => {
@@ -22,6 +22,7 @@ const Register = () => {
       </div>
 
       <Form/>
+      <Footer/>
     </>
   );
 };
