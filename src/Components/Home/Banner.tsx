@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa"
 const Banner = () => {
     const handleShare = () => {
         const phoneNumber = "2348127064038"; // Replace with the recipient's phone number (with country code, e.g., "234XXXXXXXXXX")
-        const message = `Hey Ray, I’m _______! 😊\n\nI came across Mevolve and would love to learn more about it. Could you share some details with me?🥺💘`;
+        const message = `Hey Ray, I’m _"your name..."_! 😊\n\nI came across Mevolve and would love to learn more about it. Could you share some details with me?🥺💘\n\n _message from ${window.location.origin}_`;
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, "_blank");
