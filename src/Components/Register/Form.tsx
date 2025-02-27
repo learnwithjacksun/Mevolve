@@ -134,7 +134,7 @@ const Form = () => {
 
               <button
                 onClick={toggleModal}
-                className="mt-4 w-full bg-green-600 text-white py-2 rounded-full font-medium"
+                className="mt-4 w-full bg-green-700 text-white py-2 rounded-full font-medium"
               >
                 Start Exploring 📚
               </button>
