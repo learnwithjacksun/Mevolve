@@ -28,7 +28,7 @@ const Sidebar = ({
   const isHome = location.pathname === "/"
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end md:hidden block">
+    <div className="fixed inset-0 z-50 flex justify-end md:hidden ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

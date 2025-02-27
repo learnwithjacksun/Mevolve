@@ -15,3 +15,18 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
     label: string;
   }[];
 }
+
+interface FormType{
+    fullname:string,
+    email:string,
+    phoneNumber:string,
+    genre:string,
+    lastBookRead: string
+}
+
+interface ModalProps {
+    title?: string;
+    children: React.ReactNode;
+    toggleModal: () => void;
+    isOpen: boolean;
+  }

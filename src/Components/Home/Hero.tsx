@@ -5,7 +5,9 @@ const Hero = () => {
   return (
     <main className="main">
       <Section className="font-sans text-center space-y-4 md:w-[500px] w-full mx-auto">
-        <div className="mb-10 space-y-4">
+        <div
+        data-aos="fade-up"
+        className="mb-10 space-y-4">
             <h1 className="font-mont font-bold text-4xl md:text-5xl">
               Elevate Your Mind,
                Expand Your World
@@ -18,6 +20,7 @@ const Hero = () => {
             </p>
         </div>
         <Link
+         data-aos="zoom-in"
           to="/register"
           className="mt-6 bg-green-700 font-mont text-white font-semibold px-6 py-4 rounded-full"
         >

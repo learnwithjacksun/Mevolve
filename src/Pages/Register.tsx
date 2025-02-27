@@ -6,7 +6,7 @@ const Register = () => {
     <>
       <div className="hero-container text-white center">
         <Header />
-        <div className="main font-sans text-center space-y-4 md:w-[500px] w-full mx-auto">
+        <div data-aos="fade-up" className="main font-sans text-center space-y-4 md:w-[500px] w-full mx-auto">
           <div className="mb-10 space-y-4">
             <h1 className="font-mont font-bold text-4xl md:text-5xl">
               Join <span className="text-green-600 font-pac">Mevolve</span> and

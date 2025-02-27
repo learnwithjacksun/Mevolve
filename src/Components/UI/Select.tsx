@@ -25,7 +25,7 @@ const Select = ({label, name, value, onChange, options, error}: SelectProps) => 
         className="absolute right-3 top-1/2 -translate-y-1/2 text-green-700 pointer-events-none"
       />
     </div>
-    {error && <p className="text-red-500 text-sm">{error}</p>}
+    {error && <p className="text-red-500 font-sans text-xs font-medium">{error}</p>}
   </div>
   )
 }

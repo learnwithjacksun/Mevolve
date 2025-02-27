@@ -1,3 +1,5 @@
 export {default as Sidebar} from './Sidebar'
 export {default as Input} from './Input'
 export {default as Select} from './Select'
+export {default as Modal} from './Modal'
+export {default as ScrollToTop} from './ScrollToTop'
