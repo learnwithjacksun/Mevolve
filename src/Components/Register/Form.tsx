@@ -49,6 +49,12 @@ const Form = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if(!form.fullname || !form.email || !form.phoneNumber){
+        toast.error("All fields are required!")
+        setCurrentStep(1)
+        return;
+    }
     console.log(form);
     localStorage.setItem("username", form.fullname);
     toast.success("Form Submitted!");

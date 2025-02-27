@@ -29,7 +29,7 @@ const About = () => {
                 <img
                   src="https://i.ibb.co/dwRZrHdD/image.webp"
                   width={300}
-                  className="border-4 border-green-700 rounded-lg -rotate-5 hover:rotate-5 duration-200"
+                  className="border-4 border-green-700 rounded-lg -rotate-5 hover:rotate-5 duration-500 transition-all"
                 />
               </div>
             </Box>
