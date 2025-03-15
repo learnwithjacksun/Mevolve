@@ -1,4 +1,4 @@
-import { About, Banner, Footer, Header, Hero } from "@/Components/Home";
+import { About, Banner, Footer, Header, Hero, Offers, Values } from "@/Components/Home";
 
 const Home = () => {
   return (
@@ -8,6 +8,8 @@ const Home = () => {
         <Hero />
       </div>
       <About/>
+      <Values/>
+      <Offers/>
       <Banner/>
       <Footer/>
     </>
